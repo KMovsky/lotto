@@ -8,17 +8,10 @@ highestValue = 49
 
 
 class lotto(object):
-    cyfry = []    
-    def losuj(min, max):
-        return random.randint(min, max)
-    
+    cyfry = []
+
     def proces(ist):
-        for i in range(ist):
-            lotto.cyfry.append(lotto.losuj(lowestValue, highestValue))
-            while lotto.cyfry[i] in lotto.cyfry[:i]:
-                lotto.cyfry[i] = lotto.losuj(lowestValue, highestValue)
-        
-        
+        lotto.cyfry = random.sample(range(lowestValue, highestValue),ist)
         return lotto.cyfry
 
 lotto.proces(ileCyfr)
