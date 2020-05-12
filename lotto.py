@@ -11,7 +11,7 @@ class lotto(object):
     cyfry = []
 
     def proces(ist):
-        lotto.cyfry = random.sample(range(lowestValue, highestValue),ist)
+        lotto.cyfry = random.sample(range(lowestValue, highestValue+1),ist)
         return lotto.cyfry
 
 lotto.proces(ileCyfr)
